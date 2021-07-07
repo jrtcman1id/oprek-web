@@ -72,6 +72,7 @@ module.exports = {
             },
             {
                 test: /\.(woff2|woff|ttf)$/,
+                include: path.resolve(__dirname, './node_modules/bootstrap-icons/font/fonts'),
                 use: [
                     {
                         loader: 'file-loader',
