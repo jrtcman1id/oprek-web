@@ -38,7 +38,6 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                exclude: [/\.styles.css$/, /node_modules/],
                 use: [
                     MiniCssExtractPlugin.loader, 
                     'css-loader'
@@ -46,7 +45,6 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                exclude: [/\.styles.scss$/, /node_modules/],
                 use: [
                     MiniCssExtractPlugin.loader, 
                     'css-loader', 
@@ -69,7 +67,6 @@ module.exports = {
             },
             {
                 test: /\.(woff2|woff|ttf)$/,
-                include: path.resolve(__dirname, './node_modules/bootstrap-icons/font/fonts'),
                 use: [
                     {
                         loader: 'file-loader',
