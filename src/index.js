@@ -235,7 +235,7 @@ function Weka(){
                 <i class="fas fa-angle-right fa-5x"></i>          
             </li>
         </ul>
-        <div class="my-slider">
+        <div class="bawailmu-my-slider">
             <div class="slider-item">
                 <div class="card">                
                     <img src="https://placeimg.com/200/150/any" alt="" />
@@ -283,27 +283,27 @@ document.body.append(
     );
 
 
-    const slider = tns({
-        container: '.my-slider',
-        loop: true,
-        items: 1,
-        slideBy: 'page',
-        nav: false,    
-        autoplay: true,
-        speed: 400,
-        autoplayButtonOutput: false,
-        mouseDrag: true,
-        lazyload: true,
-        controlsContainer: "#customize-controls",
-        responsive: {
-            640: {
-                items: 2,
-            },
-            
-            768: {
-                items: 3,
-            }
+const slider = tns({
+    container: '.bawailmu-my-slider',
+    loop: true,
+    items: 1,
+    slideBy: 'page',
+    nav: false,    
+    autoplay: true,
+    speed: 400,
+    autoplayButtonOutput: false,
+    mouseDrag: true,
+    lazyload: true,
+    controlsContainer: "#customize-controls",
+    responsive: {
+        640: {
+            items: 2,
+        },
+        
+        768: {
+            items: 3,
         }
-    
-      });
+    }
+
+    });
     
