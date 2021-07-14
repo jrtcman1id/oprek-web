@@ -6,13 +6,19 @@ function Fields(){
 function RegisForm(){
     return<>                
         <div class="container-md rounded-3 px-md-5 px-sm-1">
-            <div class="fs-4 p-sm-4 text-center"><a>Registrasi</a></div>
+            <div class="fs-4 p-sm-4 text-center text-wrap">
+                <h4>Open Recruitment </h4>
+                <h5>Anggota jRTC 3.0</h5>
+                <div class="fw-bolder fst-italic text-danger">
+                    <p class="fs-6">"Tidak akan pernah ada pemungutan biaya apapun seperti uang kas ataupun pembelian alat alat robotik"</p>
+                </div>                
+            </div>
             <div class="row px-sm-5">    
                 <div class="col">            
                     <div class="d-flex flex-column flex-md-row my-md-2">
                         <div class="w-100 pe-md-3">
                             <label for="exampleFormControlInput2" class="form-label">Nama Lengkap</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nama Lengkap" style="background-color: blue; opacity: 0.1;" />
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nama Lengkap" />
                         </div>
                         <div class="w-100">
                             <label for="exampleFormControlInput1" class="form-label">Email address</label>
@@ -40,7 +46,7 @@ function RegisForm(){
                         </div>
                         <div class="w-100">
                             <label for="exampleFormControlInput1" class="form-label">Tanggal Lahir</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Tanggal lahir" />
+                            <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="MM/DD/YYYY" value="1970-30-12" />                            
                         </div>
                     </div>                                                                              
                     <div class="my-md-2">                
@@ -61,21 +67,10 @@ function RegisForm(){
     </>
 }
 
-function Test(){
-    return<>
-    <div class="container-sm bg-primary">100% wide until small breakpoint</div>
-    <div class="container-md bg-secondary">100% wide until medium breakpoint</div>
-    <div class="container-lg bg-warning">100% wide until large breakpoint</div>
-    <div class="container-xl bg-danger">100% wide until extra large breakpoint</div>
-    <div class="container-xxl bg-success">100% wide until extra extra large breakpoint</div>
-    </>
-}
-
 function Main(){
     return<>
     <div class="py-4 bg-transparent">
-        <RegisForm />
-        <Test />
+        <RegisForm />        
     </div>    
     </>
 }
