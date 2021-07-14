@@ -29,108 +29,42 @@ html {
     body {
         font-family: 'Open Sans', Arial, Helvetica, sans-serif;
         font-weight: 300;
+        // background: url(./bg.svg);
     }
 }
 
-// body {
-//     background: #333;
-//      color: white;
-//  }
+.bawailmu-bg-main {
+    background: linear-gradient(-180deg,#f53d2d,#f63);
+    background-color: rgba(0, 0, 0, 0);
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-image: linear-gradient(-180deg, rgb(245, 61, 45), rgb(255, 102, 51));
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;
+}
 
- .slider-container {    
-     max-width: 1000px;
-     padding: 2rem 3rem;
-     background: #e6e6e6;
-     margin: 2rem auto 0 auto;
-     overflow: hidden;
-     border-radius: 5px;    
-     position:relative;
-     &:before {
-         content: '.slider-container';
-         position: absolute;
-         left: 0;
-         top: 0;
-         color: blue;
-     }
- }
- 
- img {
-     display: inline-block;
-     vertical-align: top;
-     max-width: 100%;
- }
- 
- .my-slider {
-     position: relative;    
- }
- 
- .slider-item {
-     background: grey;
-     border-right: 2px solid #333;
-     padding: 1.5rem .75rem;
-     position: relative;
-     &:before {
-         content: '.slider-item';
-         position: absolute;
-         left: 0;
-         top: 0;
-         color: blue;
-     }
-     
-     &:hover {
-         cursor: pointer;
-     }
- }
- 
- .controls {
-     margin: 0;
-     padding: 0;
-     list-style: none;
-     position: absolute;
-     left: 0;    
-     background: #333;
-     width: 100%;    
-     top: 50%;
-     transform: translatey(-50%);
-     display: flex;
-     align-items: center;    
-     justify-content: space-between;
-     &:focus {
-         outline: none;
-     }
- 
-     li:hover {
-         cursor: pointer;        
-     }
- }
- 
- .card {
-     text-align: center;    
-     margin: 0 auto;
-     max-width: 200px;       
-     color: #333;
-     background: white;
-     border-radius: 5px;
-     padding-bottom: .75rem;
-     font-family: sans-serif;
-     overflow: hidden;
-     box-shadow: 2px 2px rgba(black, .3);
-     position: relative;
-     &:before {
-         content: '.card';
-         position: absolute;
-         bottom: 0;
-         color: blue;
-     }
-     img {
-         margin-bottom: .25rem;
-     }
-     
-     h2 {
-         margin: 0 0 .25rem;
-     }
-     p {
-         margin: 0;
-         padding: 0 .5rem;
-     }
- }
+.text-header {
+    color: #fff;
+    text-decoration: none;
+    font-size: .8125rem;
+    font-weight: 300;
+    padding: 0 .4375rem;
+}
+
+.border-right {
+    border-right: 2px solid hsla(0,0%,100%,.22);
+}
+.text-sh {
+    font-weight: 300;
+    font-size: .8125rem;
+    text-transform: capitalize;
+}
+
+.text-favorite {
+    font-size: .75rem;
+    font-weight: 300;
+    line-height: .875rem;
+}

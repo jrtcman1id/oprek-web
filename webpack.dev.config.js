@@ -7,7 +7,7 @@ const webpack = require('webpack');
 const setting =  {
     mode: 'none',
     build: './dist/dev',
-    port: 9000,
+    port: 9001,
 };
 
 module.exports = {
@@ -36,7 +36,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(png|jpg)$/,
+                test: /\.(png|jpg|svg)$/,
                 use: [
                     'file-loader'
                 ]
