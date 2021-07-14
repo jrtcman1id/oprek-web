@@ -225,49 +225,52 @@ if (CustomComponent['xTagName'] === undefined ){
 function Weka(){
     return (
         <>
-    <h1> Tiny slider example</h1>
-    <div class="slider-container">
-        <ul class="controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
-            <li class="prev" data-controls="prev" aria-controls="customize" tabindex="-1">
-                <i class="fas fa-angle-left fa-5x"></i>
-            </li>
-            <li class="next" data-controls="next" aria-controls="customize" tabindex="-1">
-                <i class="fas fa-angle-right fa-5x"></i>          
-            </li>
-        </ul>
-        <div class="bawailmu-my-slider">
-            <div class="slider-item">
-                <div class="card">                
-                    <img src="https://placeimg.com/200/150/any" alt="" />
-                    <h2>Title 1</h2>
-                    <p class="card_description">Loresm ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, voluptas!</p>
-                </div>
+
+<h1> Tiny slider example</h1>
+<div class="slider-container">
+    <ul class="controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+        <li class="prev" data-controls="prev" aria-controls="customize" tabindex="-1">
+            <i class="fas fa-angle-left fa-5x"></i>
+        </li>
+        <li class="next" data-controls="next" aria-controls="customize" tabindex="-1">
+            <i class="fas fa-angle-right fa-5x"></i>          
+        </li>
+    </ul>
+    <div class="my-slider">
+        <div class="slider-item">
+            <div class="card">                
+                <img src="https://placeimg.com/200/150/any" alt="" />
+                <h2>Title 1</h2>
+                <p class="card_description">Loresm ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, voluptas!</p>
             </div>
-            
-            <div class="slider-item">
-                <div class="card">                
-                    <img src="https://placeimg.com/200/150/nature" alt="" />                       
-                    <h2>Title 2</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, voluptas!</p>
-                </div>
+        </div>
+        
+        <div class="slider-item">
+            <div class="card">                
+                <img src="https://placeimg.com/200/150/nature" alt="" />                       
+                <h2>Title 2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, voluptas!</p>
             </div>
-            
-            <div class="slider-item">
-                <div class="card">                
-                    <img src="https://placeimg.com/200/150/nature/2" alt="" />
-                    <h2>Title 3</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, voluptas!</p>
-                </div>
+        </div>
+        
+        <div class="slider-item">
+            <div class="card">                
+                <img src="https://placeimg.com/200/150/nature/2" alt="" />
+                <h2>Title 3</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, voluptas!</p>
             </div>
-            <div class="slider-item">
-                <div class="card">                
-                    <img src="https://placeimg.com/200/150/nature/3" alt="" />
-                    <h2>Title 4</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, voluptas!</p>
-                </div>
+        </div>
+        <div class="slider-item">
+            <div class="card">                
+                <img src="https://placeimg.com/200/150/nature/3" alt="" />
+                <h2>Title 4</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, voluptas!</p>
             </div>
-        </div>    
-    </div>
+        </div>
+    </div>    
+</div>
+
+
     </>
     );
 }
@@ -283,8 +286,9 @@ document.body.append(
     );
 
 
+
 const slider = tns({
-    container: '.bawailmu-my-slider',
+    container: '.my-slider',
     loop: true,
     items: 1,
     slideBy: 'page',
@@ -305,5 +309,5 @@ const slider = tns({
         }
     }
 
-    });
+});
     
