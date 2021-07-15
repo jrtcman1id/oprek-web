@@ -2,12 +2,13 @@ import Img from './Logo.png';
 
 function ButtonSosmed(){
     return <>
-        <div class="me-auto">
-            <div class="d-inline-block text-header">Kunjungi Sosial Media </div>
-            <a href="https://www.youtube.com/channel/UCfya5Km5iQcTNnGnsdKljdg" class="d-inline-block link-light"><i class="bi bi-youtube mx-1"></i></a>
-            <a href="#" class="d-inline-block link-light"><i class="bi bi-twitter mx-1"></i></a>
-            <a href="#" class="d-inline-block link-light"><i class="bi bi-instagram mx-1"></i></a>
-            <a href="#" class="d-inline-block link-light"><i class="bi bi-file-music-fill mx-1"></i></a>
+        <div class="me-auto text-center">
+            <div class="d-inline-block text-header">Kunjungi Sosial Media </div> <br></br>
+            <a href="https://www.youtube.com/channel/UCfya5Km5iQcTNnGnsdKljdg" class="ms-1 d-inline-block link-light"><i class="bi bi-youtube mx-1"></i></a>
+            <a href="https://twitter.com/jrtcman1id" class="d-inline-block link-light"><i class="bi bi-twitter mx-1"></i></a>
+            <a href="https://www.instagram.com/p/CODEiwcrtMR/" class="d-inline-block link-light"><i class="bi bi-instagram mx-1"></i></a>
+            <a href="#" class="d-inline-block link-light"><i class="bi bi-facebook mx-1"></i></a>
+            <a href="#" class="d-inline-block link-light"><i class="bi bi-github mx-1"></i></a>
         </div>
     </>
 }
@@ -16,14 +17,6 @@ function LeftHeaderBottom(){
     return <>
         <div class="text-center mx-5 my-1">
         <img src={Img} class="img-fluid" alt="..." />
-        </div>
-    </>
-}
-
-function RightHeaderBottom(){
-    return <>
-        <div class="text-center mx-5">
-            <i class="bi bi-cart"></i>
         </div>
     </>
 }
@@ -70,10 +63,20 @@ function HeaderBottom(){
     </>
 }
 
+function HeaderBottomSm(){
+    return <>        
+            <div class="row">                
+                <div class="col align-self-center my-2">
+                    <CenterHeaderBottom />
+                </div>                
+            </div>
+    </>
+}
+
 function Header() {
     return <>
 
-        <header class="text-white sticky-top bg-dark">
+        <header class="d-none text-white sticky-top bg-dark d-md-block">
             <div class="container">
                 <div class="container">
                     {/* <HeaderTop /> */}
@@ -88,7 +91,21 @@ function Header() {
                 </div> */}
             </div>
         </header>        
-        
+        <header class="d-block text-white sticky-top bg-dark d-md-none">
+            <div class="container">
+                <div class="container">
+                    {/* <HeaderTop /> */}
+                    <HeaderBottomSm />                    
+                </div>
+                
+                {/* <div class=" d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <Logo />
+                    <NavBar />
+                    <Search />
+                    <ButtonRegister />
+                </div> */}
+            </div>
+        </header>
     </>;
 }
 

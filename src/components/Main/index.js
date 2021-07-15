@@ -1,8 +1,5 @@
 import { Modal } from 'bootstrap';
-function Fields(){
-    return<>
-    </>
-}
+import Img1 from './Robot transparant.png';
 
 // Example POST method implementation:
 async function postData(url = '', data = {}) {
@@ -31,10 +28,27 @@ function RegisForm(){
             elem.addEventListener('submit', (event) => {
                 event.preventDefault();
                 const data = new FormData(event.target);
-                const valueFullName = data.get('exampleFormControlInput1x');
-                console.log(valueFullName);
+                const fullName = data.get('fullName');
+                console.log(fullName);
+                const gender = data.get('gender');
+                console.log(gender);
+                const email = data.get('email');
+                console.log(email);
+                const nomer = data.get('nomer');
+                console.log(nomer);
+                const jurusan = data.get("jurusan");
+                console.log(jurusan);
+                const tempatLahir = data.get('tempatLahir');
+                console.log(tempatLahir);
+                const tanggalLahir = data.get('tanggalLahir');
+                console.log(tanggalLahir);
+                const alamat = data.get('alamat');
+                console.log(alamat);
+                const motivasi = data.get('motivasi');
+                console.log(motivasi);
 
-                if(valueFullName === ""){
+
+                if(fullName === ""){
                     let myModal = new Modal(
                         document.getElementById("modalFormFailed"),
                         {}    
@@ -43,18 +57,18 @@ function RegisForm(){
                     return;
                 }
                 let dataRequest = {
-                    full_name : valueFullName,
-                    gender : "Pria", 
-                    email : "merdeka@satu.com", 
-                    phone_number: "088111111111111", 
-                    major : "IPA", 
-                    birth_place : "Bogor", 
-                    birth_date : "12-12-2005", 
-                    residence_address : "Jalan Merdeka Satu Bogor", 
-                    motivation : "Elite"
+                    full_name : fullName,
+                    gender : gender, 
+                    email : email, 
+                    phone_number: nomer, 
+                    major : jurusan, 
+                    birth_place : tempatLahir, 
+                    birth_date : tanggalLahir, 
+                    residence_address : alamat, 
+                    motivation : motivasi
                 }
 
-                postData('http://192.168.10.102:3000/recruits', dataRequest)
+                postData('http://oprec.jrtc.man1.id/api/recruits', dataRequest)
                 .then(data => {
                     console.log(JSON.stringify(data)); // JSON data parsed by `data.json()` call
                     //berhasil
@@ -78,10 +92,11 @@ function RegisForm(){
             });
         }}>
             <div class="fs-4 p-sm-4 text-center text-wrap">
-                <h4>Open Recruitment </h4>
+                <h3>Open Recruitment </h3>
                 <h5>Anggota jRTC 3.0</h5>
-                <div class="fw-bolder fst-italic text-danger">
-                    <p class="fs-6">"Tidak akan pernah ada pemungutan biaya apapun seperti uang kas ataupun pembelian alat alat robotik"</p>
+                <img src={Img1} class="img-fluid jrtc-w-10 border-none ms-2"></img>
+                <div class="fw-bolder fst-italic text-danger">                    
+                    <p class="fs-6"><strong class="text-uppercase fs-5">Pendaftaran tanggal 16-30 juli 2021</strong><br></br>"Tidak akan pernah ada pemungutan biaya apapun seperti uang kas ataupun pembelian alat alat robotik"</p>
                 </div>                
                 <Success />
                 <Failed />
@@ -91,45 +106,53 @@ function RegisForm(){
                 <div class="col">            
                     <div class="d-flex flex-column flex-md-row my-md-2">
                         <div class="w-100 pe-md-3">
-                            <label for="exampleFormControlInput1x" class="form-label">Nama Lengkap</label>
-                            <input type="text" class="form-control shadow-none" name="exampleFormControlInput1x" id="exampleFormControlInput1x" placeholder="Nama Lengkap" />
+                            <label for="fullName" class="form-label">Nama Lengkap</label>
+                            <input type="text" class="form-control shadow-none" name="fullName" id="fullName" placeholder="Nama Lengkap" />
                         </div>
-                        <div class="w-100">
-                            <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                            <input type="email" class="form-control shadow-none" id="exampleFormControlInput1" placeholder="name@example.com" />
+                        <div class="w-100">                            
+                            <label for="gender" class="form-label">Jenis Kelamin</label>
+                            <select class="form-select shadow-none" name="gender" id="gender" aria-label="Default select example">                        
+                                <option value="Laki-laki">Laki-laki</option>
+                                <option value="Perempuan">Perempuan</option>                                
+                            </select>
                         </div>
                     </div>                                                                                                                          
                     <div class="d-flex flex-column flex-md-row my-md-2">
                         <div class="w-100 pe-md-3">
-                            <label for="exampleFormControlInput2" class="form-label">Nomer Telepon</label>
-                            <input type="text" class="form-control shadow-none" id="exampleFormControlInput1" placeholder="08*********" />
+                            
+                            <label for="nomer" class="form-label">Nomer Telepon</label>
+                            <input type="text" class="form-control shadow-none" name="nomer" id="nomer" placeholder="08*********" />
                         </div>
                         <div class="w-100">
-                            <label for="exampleFormControlInput1" class="form-label">Jurusan</label>
-                            <select class="form-select shadow-none" aria-label="Default select example">                        
-                                <option value="1">IPA</option>
-                                <option value="2">IPS</option>
-                                <option value="3">AGAMA</option>
+                            <label for="jurusan" class="form-label">Jurusan</label>
+                            <select class="form-select shadow-none" name="jurusan" id="jurusan" aria-label="Default select example">                        
+                                <option value="IPA">IPA</option>
+                                <option value="IPS">IPS</option>
+                                <option value="AGAMA">AGAMA</option>
                             </select>      
                         </div>
                     </div>
                     <div class="d-flex flex-column flex-md-row my-md-2">
                         <div class="w-100 pe-md-3">
-                            <label for="exampleFormControlInput2" class="form-label">Tempat Lahir</label>
-                            <input type="text" class="form-control shadow-none" id="exampleFormControlInput1" placeholder="Kota" /> 
+                            <label for="tempatLahir" class="form-label">Tempat Lahir</label>
+                            <input type="text" class="form-control shadow-none" name="tempatLahir" id="tempatLahir" placeholder="Kota" /> 
                         </div>
                         <div class="w-100">
-                            <label for="exampleFormControlInput1" class="form-label">Tanggal Lahir</label>
-                            <input type="date" class="form-control shadow-none" id="exampleFormControlInput1" placeholder="MM/DD/YYYY" value="1970-30-12" />                            
+                            <label for="tanggalLahir" class="form-label">Tanggal Lahir</label>
+                            <input type="date" class="form-control shadow-none" name="tanggalLahir" id="tanggalLahir" placeholder="MM/DD/YYYY" value="1970-30-12" />                            
                         </div>
-                    </div>                                                                              
+                    </div>     
+                    <div class="my-md-2">                        
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control shadow-none" name="email" id="email" placeholder="name@example.com" />
+                    </div>                                                                         
                     <div class="my-md-2">                
-                        <label for="exampleFormControlTextarea1" class="form-label">Alamat Domisili</label>
-                        <textarea class="form-control shadow-none" id="exampleFormControlTextarea1" rows="3"></textarea>                                        
+                        <label for="alamat" class="form-label">Alamat Domisili</label>
+                        <textarea class="form-control shadow-none" name="alamat" id="alamat" rows="3"></textarea>                                        
                     </div>      
                     <div class="my-md-2">
-                        <label for="exampleFormControlTextarea1" class="form-label">Motivasi Mendaftar JRTC</label>
-                        <textarea class="form-control shadow-none" id="exampleFormControlTextarea1" rows="3"></textarea>  
+                        <label for="motivasi" class="form-label">Motivasi Mendaftar JRTC</label>
+                        <textarea class="form-control shadow-none" name="motivasi" id="motivasi" rows="3"></textarea>                          
                     </div>
                 </div>
             </div>      
