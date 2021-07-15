@@ -4,7 +4,7 @@ function ButtonSosmed(){
     return <>
         <div class="me-auto">
             <div class="d-inline-block text-header">Kunjungi Sosial Media </div>
-            <a href="#" class="d-inline-block link-light"><i class="bi bi-youtube mx-1"></i></a>
+            <a href="https://www.youtube.com/channel/UCfya5Km5iQcTNnGnsdKljdg" class="d-inline-block link-light"><i class="bi bi-youtube mx-1"></i></a>
             <a href="#" class="d-inline-block link-light"><i class="bi bi-twitter mx-1"></i></a>
             <a href="#" class="d-inline-block link-light"><i class="bi bi-instagram mx-1"></i></a>
             <a href="#" class="d-inline-block link-light"><i class="bi bi-file-music-fill mx-1"></i></a>

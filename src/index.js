@@ -7,6 +7,7 @@ import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
 import './index.scss';
+import { Modal } from 'bootstrap';
 
 function App() {
     return <>
@@ -17,3 +18,6 @@ function App() {
 }
 
 document.body.append(<App />);
+
+
+
