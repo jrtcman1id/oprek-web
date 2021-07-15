@@ -2,6 +2,16 @@ import { Modal } from 'bootstrap';
 // import Img1 from './Robot transparant.png';
 import Img from '../../Logo.png';
 
+import ImgMascot from '../../mascot.png';
+
+function Mascot(){
+    return <>
+        <div class="text-center mx-5 my-1">
+        <img src={ImgMascot} class="img-fluid" alt="..." />
+        </div>
+    </>
+}
+
 function MiddleLogoMain(){
     return <>
         <div class="text-center mx-5 my-1">
@@ -172,6 +182,7 @@ function RegisForm(){
             </div>      
             <div class="ms-sm-5 mt-3">
                 <button type="submit" class="btn btn-secondary">Submit</button>
+                <Mascot />
             </div>        
             <br></br>                  
         </form>                                                                        

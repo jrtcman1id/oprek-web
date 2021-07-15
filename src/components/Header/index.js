@@ -13,6 +13,16 @@ function ButtonSosmed(){
     </>
 }
 
+function MiddleLogoMain(){
+    return <>
+        <div class="text-center mx-5 my-1">
+        <img src={Img} class="img-fluid" alt="..." />
+        </div>
+    </>
+}
+
+
+
 function LeftHeaderBottom(){
     return <>
         <div class="text-center mx-5 my-1">
