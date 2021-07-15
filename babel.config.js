@@ -7,5 +7,5 @@ module.exports = {
             importSource: '@bawailmu'
         } ]
     ],
-    plugins: []
+    plugins: ['@babel/plugin-transform-runtime']
 }
