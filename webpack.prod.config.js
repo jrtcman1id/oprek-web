@@ -11,7 +11,7 @@ const setting =  {
     port: 3000,
 };
 
-let publicPathProdTest = `http://localhost:${setting.port}/`;
+// let publicPathProdTest = `http://localhost:${setting.port}/`;
 let publicPathProd = `http://oprec.jrtc.man1.id/`;
 
 module.exports = {

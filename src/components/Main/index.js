@@ -67,7 +67,15 @@ function RegisForm(){
                 console.log(motivasi);
 
 
-                if(fullName === ""){
+                if(fullName === ""
+                    || gender === ""
+                    || email === ""
+                    || nomer === ""
+                    || jurusan === ""
+                    || tempatLahir === ""
+                    || alamat === ""
+                    || motivasi === ""
+                ){
                     let myModal = new Modal(
                         document.getElementById("modalFormFailed"),
                         {}    
