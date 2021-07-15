@@ -1,4 +1,4 @@
-import Img from './Logo.png';
+import Img from '../../Logo.png';
 
 function ButtonSosmed(){
     return <>
@@ -6,7 +6,7 @@ function ButtonSosmed(){
             <div class="d-inline-block text-header">Kunjungi Sosial Media </div> <br></br>
             <a href="https://www.youtube.com/channel/UCfya5Km5iQcTNnGnsdKljdg" class="ms-1 d-inline-block link-light"><i class="bi bi-youtube mx-1"></i></a>
             <a href="https://twitter.com/jrtcman1id" class="d-inline-block link-light"><i class="bi bi-twitter mx-1"></i></a>
-            <a href="https://www.instagram.com/p/CODEiwcrtMR/" class="d-inline-block link-light"><i class="bi bi-instagram mx-1"></i></a>
+            <a href="https://www.instagram.com/jrtcman1id/" class="d-inline-block link-light"><i class="bi bi-instagram mx-1"></i></a>
             <a href="#" class="d-inline-block link-light"><i class="bi bi-facebook mx-1"></i></a>
             <a href="#" class="d-inline-block link-light"><i class="bi bi-github mx-1"></i></a>
         </div>
@@ -76,7 +76,7 @@ function HeaderBottomSm(){
 function Header() {
     return <>
 
-        <header class="d-none text-white sticky-top bg-dark d-md-block">
+        <header class="d-none text-white sticky-top jrtc-bg-dark d-md-block">
             <div class="container">
                 <div class="container">
                     {/* <HeaderTop /> */}
@@ -91,7 +91,7 @@ function Header() {
                 </div> */}
             </div>
         </header>        
-        <header class="d-block text-white sticky-top bg-dark d-md-none">
+        <header class="d-block text-white sticky-top bg-secondary d-md-none">
             <div class="container">
                 <div class="container">
                     {/* <HeaderTop /> */}

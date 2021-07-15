@@ -6,19 +6,20 @@ const webpack = require('webpack');
 // const { ModuleFederationPlugin } = require('webpack').container;
 
 const setting =  {
-    mode: 'none',
+    mode: 'production',
     build: './dist/prod',
-    port: 3000
+    port: 3000,
 };
 
+let publicPathProdTest = `http://localhost:${setting.port}/`;
+let publicPathProd = `http://oprec.jrtc.man1.id/`;
+
 module.exports = {
-    entry: {
-        'index':'./src/index.js'
-    },
+    entry: ["regenerator-runtime/runtime.js", './src/index.js'],
     output: {
         filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, setting.build),
-        publicPath: `http://localhost:${setting.port}/`
+        publicPath: publicPathProd
     },
     mode: setting.mode,
     optimization: {
@@ -91,16 +92,15 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            title: 'Hello World',
+            title: 'Oprec jRTC',
             template: 'src/page-template.hbs',
             viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
-            description: 'Hello World App',
+            description: 'Oprec jRTC App',
         }),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(setting.mode)
         }),
-        new webpack.SourceMapDevToolPlugin({})
-        // new webpack.SourceMapDevToolPlugin({}),
+        // new webpack.SourceMapDevToolPlugin({})
         // new ModuleFederationPlugin({
         //     name: 'HelloWorldApp',
         //     filename: 'remoteEntry.js',

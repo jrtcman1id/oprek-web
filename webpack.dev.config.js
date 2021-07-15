@@ -93,15 +93,15 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             filename: 'hello-world.html',
-            title: 'Hello World',
+            title: 'Oprec jRTC',
             template: 'src/page-template.hbs',
             viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
-            description: 'Hello World App',
+            description: 'Oprec jRTC App',
         }),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(setting.mode)
         }),
-        new webpack.SourceMapDevToolPlugin({})
+        // new webpack.SourceMapDevToolPlugin({})
         // new webpack.SourceMapDevToolPlugin({}),
         // new ModuleFederationPlugin({
         //     name: 'HelloWorldApp',

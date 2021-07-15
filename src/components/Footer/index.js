@@ -14,7 +14,7 @@ function SmFooter(){
                             <div class="d-inline-block text-header">Kunjungi Sosial Media </div> <br></br>
                             <a href="https://www.youtube.com/channel/UCfya5Km5iQcTNnGnsdKljdg" class="ms-1 d-inline-block link-light"><i class="bi bi-youtube mx-1"></i></a>
                             <a href="https://twitter.com/jrtcman1id" class="d-inline-block link-light"><i class="bi bi-twitter mx-1"></i></a>
-                            <a href="https://www.instagram.com/p/CODEiwcrtMR/" class="d-inline-block link-light"><i class="bi bi-instagram mx-1"></i></a>
+                            <a href="https://www.instagram.com/jrtcman1id/" class="d-inline-block link-light"><i class="bi bi-instagram mx-1"></i></a>
                             <a href="#" class="d-inline-block link-light"><i class="bi bi-facebook mx-1"></i></a>
                             <a href="#" class="d-inline-block link-light"><i class="bi bi-github mx-1"></i></a>
                         </div>
@@ -45,7 +45,7 @@ function MdFooter(){
 
 function Main(){
     return<>
-    <div class="bg-dark w-100">
+    <div class="jrtc-bg-dark w-100">
         <SmFooter />
         <MdFooter />
     </div>    

@@ -1,5 +1,14 @@
 import { Modal } from 'bootstrap';
-import Img1 from './Robot transparant.png';
+// import Img1 from './Robot transparant.png';
+import Img from '../../Logo.png';
+
+function MiddleLogoMain(){
+    return <>
+        <div class="text-center mx-5 my-1">
+        <img src={Img} class="img-fluid" alt="..." />
+        </div>
+    </>
+}
 
 // Example POST method implementation:
 async function postData(url = '', data = {}) {
@@ -94,7 +103,12 @@ function RegisForm(){
             <div class="fs-4 p-sm-4 text-center text-wrap">
                 <h3>Open Recruitment </h3>
                 <h5>Anggota jRTC 3.0</h5>
-                <img src={Img1} class="img-fluid jrtc-w-10 border-none ms-2"></img>
+
+                <div class="d-block d-md-none">
+                    <MiddleLogoMain />
+                </div>
+
+                {/* <img src={Img1} class="img-fluid jrtc-w-10 border-none ms-2"></img> */}
                 <div class="fw-bolder fst-italic text-danger">                    
                     <p class="fs-6"><strong class="text-uppercase fs-5">Pendaftaran tanggal 16-30 juli 2021</strong><br></br>"Tidak akan pernah ada pemungutan biaya apapun seperti uang kas ataupun pembelian alat alat robotik"</p>
                 </div>                
@@ -173,14 +187,14 @@ function Success(){
     <div id="modalSuccess" class="modal fade" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header bg-success text-light">
                 <h5 class="modal-title">Success</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body jrtc-bg-dark text-light">
                 <p><strong>Registrasi Berhasil!!</strong> Anda terdaftar sebagai calon anggota jRTC 3.0</p>
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer jrtc-bg-blue">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
             </div>
@@ -194,14 +208,14 @@ function FailedForm(){
     <div id="modalFormFailed" class="modal fade" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Failed!!</h5>
+            <div class="modal-header bg-danger text-light">
+                <h5 class="modal-title ">Failed!!!</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body jrtc-bg-dark text-light">
                 <p><strong>Data tidak lengkap,</strong> Pastikan semua data terisi.</p>
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer jrtc-bg-blue">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
             </div>
@@ -215,14 +229,14 @@ function Failed(){
     <div id="modalFailed" class="modal fade" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Failed!!</h5>
+            <div class="modal-header bg-danger text-light">
+                <h5 class="modal-title">Failed!!!</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body jrtc-bg-dark text-light">
                 <p><strong>Registrasi Gagal</strong>, Silahkan coba kembali</p>
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer jrtc-bg-blue">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
             </div>
@@ -233,7 +247,7 @@ function Failed(){
 
 function Main(){
     return<>
-    <div class="py-4 bg-transparent">
+    <div class="py-4 jrtc-bg-blue">
         <RegisForm />        
     </div>    
     </>
